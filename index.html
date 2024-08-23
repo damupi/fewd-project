@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html color-mode="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>damupi | Digital Analyst</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="color-mode">
+    <div class="theme-switch-wrapper">
+        <em id="mode-label">Dark Mode</em>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round">
+                <span class="slider-icon"></span>
+            </div>
+        </label>
+    </div>
+    <div id="popup-menu" class="popup-menu">
+        <ul>
+            <li><a href="#hero" data-text="Home">Home</a></li>
+            <li><a href="#intro" data-text="Intro">Intro</a></li>
+            <li><a href="#skills" data-text="Skills">Skills</a></li>
+            <li><a href="#experience" data-text="Experience">Experience</a></li>
+            <li><a href="#contact" data-text="Contact me">Contact me</a></li>
+          </ul>
+    </div>
+    <nav class="container">
+        <div id="nav-box" class="nav-box">
+            <div class="logo">
+                <svg width="49.25" height="92" viewBox="0 0 197 368" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <line fill="none" stroke="#f9070e" x1="97.5" y1="52" x2="99.5" y2="365" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <line fill="none" stroke="#f9070e" x1="98.5" y1="2.5" x2="98.5" y2="30.51785" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path fill="none" stroke="#f9070e" stroke-width="10" d="M98,187 L99,230" stroke-linecap="round" stroke-linejoin="round"/>
+                      <ellipse fill="none" stroke="#f9070e" stroke-width="10" cx="98.5" cy="208.5" rx="96" ry="55" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </svg>
+                <!-- <img src="./img/logo.png" alt="damupi logo"> -->
+            </div>
+            <div class="desktop-menu">
+                <ul>
+                    <li><a href="#intro">intro</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#experience">experience</a></li>
+                    <li><a href="#contact">contact me</a></li>
+                </ul>
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
+                <span id="burguer-menu" class="material-symbols-rounded" alt="menu">menu</span>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" class="hero container">
+            <h1>Digital Analyst, Frontend Developer &amp; Crypto fan</h1>
+            <p>I track websites, automate processes and learn BTC and Nostr</p>
+            <img src="./img/avatar.jpeg" alt="my avatar" class="avatar"> 
+            <img src="./img/hero-foot-transparent.png" alt="Hero Footer Image" class="hero-footer container">
+    </section>
+    <section id="intro" class="intro container">
+            <h1>Hola user, nice to e-meet you.</h1>
+            <p>I've been working as a Digital Analytist for more than 10 years,
+                 tracking websites of millions of visits per day, sending hits via APIS in js,
+                 and automating processes in python.</p>
+            <p>I'm learning Front Web Development and got passionated by Bitcoin and Nostr. I'm
+                curious, and a constant learner.</p>
+    </section>
+    <section id="skills" class="skills container">
+        <div class="card-container">
+            <div class="card">
+                <span class="material-symbols-rounded" data-card="tag" alt="Digital Analyts">sell</span>
+                <h5>Digital Analyst</h5>
+                <p>Give me a website or an app, and I'll track it for you.</p>
+                <h6>Tracking tools:</h6>
+                <ul>
+                    <li>GTM</li>
+                    <li>Tealium</li>
+                    <li>GA4</li>
+                    <li>MixPanel</li>
+                    <li>Metrika</li>
+                    <li>...</li>
+                </ul>
+            </div>
+            <div class="card">
+                <span class="material-symbols-rounded" data-card="code" alt="Frontend Developer Logo">terminal</span>
+                <h5>Frontend Developer</h5>
+                <p>I love to see how websites look like after a few lines of code on them.</p>
+                <h6>Code Languages:</h6>
+                <span>HTML, CSS, JS, Git</span>
+                <h6>Coding tools:</h6>
+                <ul>
+                    <li>VS Code</li>
+                    <li>Github Desktop</li>
+                    <li>Figma</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="experience container"> 
+        <h2>Experience</h2>
+        <p>This is a list of the companies I work/ed for:</p>
+
+        <div class="companies">
+            <div class="company">
+                <img src="./img/gamblingdotcom.jpg" alt="Gambling.com Logo">
+                <div class="overlay">
+                  <h3>Gambling.com</h3>
+                  <p>Manage Google Analytics setup, configuration, and deployment via GTM across multiple web 
+                    assets, ensuring best practices for performance and security. Collaborate with cross-functional 
+                    teams to optimize website performance, provide accurate data insights, and support the 
+                    development of comprehensive reports and dashboards. Serve as the Google products expert, guiding 
+                    teams to maximize data usage and improve user experience.</p>
+                  <a href="https://www.gambling.com/corporate" class="cta">Visit Website</a>
+                </div>
+            </div>
+            <div class="company">
+                <img src="./img/autoscout24.jpg" alt="Autoscout24 Logo">
+                <div class="overlay">
+                  <h3>Autoscout24</h3>
+                  <p>Responsible for managing and developing the digital tracking systems across all platforms at 
+                    AutoScout24, ensuring high-quality, consistent, and compliant data collection. Establish 
+                    governance for tracking implementation, support developers, and proactively update practices 
+                    to align with industry trends and regulations. Maintain and enhance tracking quality through 
+                    manual checks and QA tools, considering the evolving digital landscape.</p>
+                  <a href="https://www.company2.com" class="cta">Visit Website</a>
+                </div>
+            </div>
+            <div class="company">
+                <img src="./img/mytheresa.jpg" alt="My Theresa">
+                <div class="overlay">
+                  <h3>My Theresa</h3>
+                  <p>Serve as the main contact for tag management and tracking, optimizing tracking setups to 
+                    enhance data quality for performance marketing. Monitor and improve tracking solutions and data 
+                    exchange with third-party vendors, while managing and optimizing the in-house product data feed 
+                    engine. Support company-wide users in maintaining product data feeds and ensure continuous process 
+                    optimization and quality checks.</p>
+                  <a href="https://www.company2.com" class="cta">Visit Website</a>
+                </div>
+            </div>
+            <div class="company">
+                <img src="./img/catenamedia.jpg" alt="Catena Media">
+                <div class="overlay">
+                    <h3>Catena Media</h3>
+                    <p>Identify trends, patterns, and irregularities across various channels to gain a deeper 
+                        understanding of customer behavior. Analyze the data to deliver actionable insights that drive 
+                        decision-making. Measure and track the performance and success of products, while also creating, 
+                        maintaining, and continually improving weekly and monthly dashboards to ensure comprehensive 
+                        reporting and monitoring.</p>
+                    <a href="https://www.catenamedia.com/about-us/" class="cta">Visit Website</a>
+                </div>
+            </div>
+            <div class="company">
+                <img src="./img/havas.jpg" alt="Havas Media Group">
+                <div class="overlay">
+                  <h3>Havas</h3>
+                  <p>CImplement Google Tag Manager across various platforms. Provide support for Google Analytics Premium, 
+                    Google Tag Manager, Adobe SiteCatalyst, and Adobe Tag Management. Develop and create dashboards using 
+                    scripting to enhance data visualization and reporting.</p>
+                  <a href="https://havasmedianetwork.com/" class="cta">Visit Website</a>
+                </div>
+            </div>
+            <div class="company">
+                <img src="./img/turespana.jpg" alt="Turespa&ntilde;a">
+                <div class="overlay">
+                  <h3>Turespa&ntilde;a</h3>
+                  <p>Create and maintain automated dashboards using the Google Analytics API. Implement and manage 
+                    Google Tag Manager across platforms. Perform data mining, analysis, and reporting on extracted results. 
+                    Analyze and measure outcomes using Yandex Metrica and Hotjar.</p>
+                  <a href="https://www.tourspain.es/en/activity-report-rules-regs-tourism/" class="cta">Visit Website</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="footer" class="footer container">
+        <svg width="59.1" height="110.4" viewBox="0 0 197 368" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <line fill="none" stroke="#f9070e" x1="97.5" y1="52" x2="99.5" y2="365" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <line fill="none" stroke="#f9070e" x1="98.5" y1="2.5" x2="98.5" y2="30.51785" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path fill="none" stroke="#f9070e" stroke-width="5" d="M98,187 L99,230" stroke-linecap="round" stroke-linejoin="round"/>
+              <ellipse fill="none" stroke="#f9070e" stroke-width="5" cx="98.5" cy="208.5" rx="96" ry="55" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+        </svg>
+
+        <p class="slogan">Love me or hate me, but mean it.</p>
+
+        <div id="contact" class="container-footer">
+            <!-- <div class="social-icons"> -->
+                <a href="mailto:damupi[at]damupi.com">
+                    <!-- <span class="material-symbols-rounded" aria-label="mailto" title="Mail" data-social="mail">
+                        mail
+                    </span> -->
+                    <img src="./img/email-dark.png" alt="">
+                </a>
+                <a href="https://t.me/yourusername">
+                    <!-- <span class="material-symbols-rounded" aria-label="Telegram" title="Telegram" data-social="telegram">
+                        send
+                    </span> -->
+                    <img src="./img/telegram-dark.png" alt="">
+                </a>
+                <a href="https://example.com">
+                    <img src="./img/twitterx-dark.png" alt="">
+                </a>
+                <a href="https://njump.me/npub1hka7d6gsy2hetge3amg47png43r9t6m7k5w8s6yhhh9q33cd6j4q0nrvth">
+                    <span>Nostr</span>
+                </a>
+            <!-- </div>         -->
+        </div>
+
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
