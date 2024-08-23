@@ -1,43 +1,32 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const modeLabel = document.getElementById('mode-label');
+let mobileMenu = document.getElementById('mobile-menu');
+let popupMenu = document.getElementById('popup-menu');
+const popMenuOpts = document.querySelectorAll('#popup-menu ul li a')
+const desktopMenuOpts = document.querySelectorAll('#desktop-menu ul li a')
+// List menu items
+// Desktop items
+const menuItems = document.querySelectorAll('.desktop-menu ul li');
+
+let imgEmail = document.querySelector('[data-social_img="email"]');
+let imgTelegram = document.querySelector('[data-social_img="telegram"]');
+let imgTwitter = document.querySelector('[data-social_img="twitter"]');
+let socialImgSrcs = [imgEmail, imgTelegram, imgTwitter];
 
 function switchTheme(e) {
+    console.log('toggling theme');
     if (e.target.checked) {
         document.documentElement.setAttribute('color-mode', 'dark');
         localStorage.setItem("color-mode", "dark");
         modeLabel.textContent = "Dark Mode";
-    } else {
+        changeSocialImgs("dark");
+      } else {
         document.documentElement.setAttribute('color-mode', 'light');
         localStorage.setItem("color-mode", "light");
         modeLabel.textContent = "Light Mode";
+        changeSocialImgs("light");
     }
 }
-
-// Event listener for toggle switch
-toggleSwitch.addEventListener('change', switchTheme, false);
-
-// Persist theme on page reload with logic to show opposite state on toggle
-if (
-    localStorage.getItem('color-mode') === 'dark' ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches &&
-     !localStorage.getItem('color-mode'))
-) {
-    document.documentElement.setAttribute('color-mode', 'dark');
-    toggleSwitch.checked = true;
-    modeLabel.textContent = "Dark Mode";
-} else {
-    document.documentElement.setAttribute('color-mode', 'light');
-    toggleSwitch.checked = false;
-    modeLabel.textContent = "Light Mode";
-}
-
-
-
-let mobileMenu = document.getElementById('mobile-menu');
-let popupMenu = document.getElementById('popup-menu');
-let popMenuOpts = document.querySelectorAll('#popup-menu ul li a')
-let desktopMenuOpts = document.querySelectorAll('#desktop-menu ul li a')
-
 
 let hidePopupMenu = () => {
   popupMenu.style.display =  'none';
@@ -50,20 +39,71 @@ let showPopupMenu = () =>  {
   popupMenu.style.overflow =  'visible';
   popupMenu.classList.toggle('hidden');
 }
+let changeSocialImgs = (theme) =>  {
+  // console.log('the theme is:', theme)
+  if (theme === 'light') { 
+    socialImgSrcs.forEach( (item) => {
+      // console.log(`the precious src was: ${item.src}`);
+      item.src = item.src.replace('dark', 'light');
+      // console.log(`the src has changed to: ${item.src}`);
+    })
+  } else {
+    socialImgSrcs.forEach( (item) => {
+      // console.log(`the precious src was: ${item.src}`);
+      item.src = item.src.replace( 'light', 'dark');
+      // console.log(`the src has changed to: ${item.src}`);
 
+    })
+  }
+  return
+}
+
+
+
+
+
+// Event listener for toggle switch
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+// Event listener for options of the hidden menu
 popMenuOpts.forEach(
-    (item) => item.addEventListener('click', hidePopupMenu )
-    )
+  (item) => item.addEventListener('click', hidePopupMenu )
+);
 
+// Event listener for clicking the hamburger menu
 mobileMenu.addEventListener('click', showPopupMenu);
 
-// popMenuOpts.addEventListener('click', hidePopupMenu);
+
+
+// Persist theme on page reload with logic to show opposite state on toggle
+if (
+      localStorage.getItem('color-mode') === 'dark' ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches &&
+      !localStorage.getItem('color-mode'))
+    ) {
+    document.documentElement.setAttribute('color-mode', 'dark');
+    toggleSwitch.checked = true;
+    modeLabel.textContent = "Dark Mode";
+    changeSocialImgs("dark")
+  } else {
+    document.documentElement.setAttribute('color-mode', 'light');
+    toggleSwitch.checked = false;
+    modeLabel.textContent = "Light Mode";
+    changeSocialImgs("light")
+}
 
 
 
-// List menu items
-// Get all li elements within the .desktop-menu div
-const menuItems = document.querySelectorAll('.desktop-menu ul li');
+
+
+
+
+
+
+
+
+
+
 
 // Add event listeners to each li
 menuItems.forEach(item => {
