@@ -680,7 +680,7 @@ background-image: url('../img/turespana.jpg');
     left: 0;
     width: 20px;
     height: 100%;
-    background-color: white;
+    background-color: var(--element2);
     animation: blink 1s 3; /* Animation effect */
   }
 
