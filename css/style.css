@@ -359,7 +359,7 @@ input:checked + .slider .slider-icon::before {
   font-weight: bold;
 }
 
-.hero p, .intro p, .experience p, footer p{
+.hero p, .intro p, footer p{
   font-size: var(--p-size);
   margin: 0.75rem 3rem;
 }
@@ -486,115 +486,98 @@ input:checked + .slider .slider-icon::before {
 
 /* FLIP CARDS */
 
-
-.companies img {
-  vertical-align: top;
-}
-
-/*
-[data-company="gambling.com"]:hover {
-background-image: url('../img/GAMB.svg');
-} */
-
-[data-company="autoscout24"] {
-background-color: #F3F100;
-background-image: url('../img/autoscout24.jpg');
-}
-
-[data-company="mytheresa"] {
-background-color: #FFFFFF;
-background-image: url('../img/mytheresa.jpg');
-}
-
-[data-company="catenamedia"] {
-background-color: #F43942;
-background-image: url('../img/catenamedia.jpg');
-}
-
-[data-company="havas"] {
-background-color: #D01F39;
-background-image: url('../img/havas.jpg');
-}
-
-[data-company="turespana"] {
-background-color: #FFFFFF;
-background-image: url('../img/turespana.jpg');
-}
-
-
 .companies {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 16px; /* space between items */
+  align-items: center;
+  gap: 3rem;
 }
 
 .company {
-  position: relative;
-  width: calc((100vw / 3) - 32px); /* divide space equally, accounting for gaps */
-  padding-top: 66.67%; /* 3:2 aspect ratio */
-  overflow: hidden;
-  border-radius: 5%; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .company img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease-out;
-  border-radius: 5%; /* Ensures the image also has rounded corners */
+  margin: 0 auto;
 }
 
 .company .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-out;
-  border-radius: 5%; /* Rounded corners for overlay */
-}
-
-.company:hover img {
   opacity: 0;
 }
-
-.company:hover .overlay {
-  opacity: 1;
+[data-company="gambling.com"] {
+  background-color: #000000;
+  background-image: url('../img/gamblingdotcom3.jpeg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.overlay h3 {
-  margin: 0;
-  font-size: 1.5em;
+[data-company="autoscout24"] {
+  background-color: #FFFFFF;
+  background-image: url('../img/autoscout24_2.png');
+  background-repeat:no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.overlay p {
-  margin: 10px 0;
-  font-size: 1em;
+[data-company="mytheresa"] {
+  background-color: #FFFFFF;
+  background-image: url('../img/mytheresa.jpg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.overlay .cta {
-  background-color: #ff5733;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease-out;
+
+[data-company="catenamedia"] {
+  background-color: #F43942;
+  background-image: url('../img/catenamedia.jpg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.overlay .cta:hover {
-  background-color: #ff794d;
+[data-company="havas"] {
+  background-color: #D01F39;
+  background-image: url('../img/havas.jpg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+[data-company="turespana"] {
+  background-color: #FFFFFF;
+  background-image: url('../img/turespana.jpg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 /* END OF FLIP CARDS */
 
@@ -771,10 +754,6 @@ background-image: url('../img/turespana.jpg');
     flex-wrap: wrap;
   }
 
-  .company {
-    width: calc((100vw / 2) - 24px); /* 2 company divs per row */
-  }
-
 }
 
 /* md */
@@ -792,18 +771,7 @@ background-image: url('../img/turespana.jpg');
     margin: .75rem 7.5rem;
   }
 
-  .companies {
-    margin: 0 5%;
-  }
-
-  .boxx {
-    max-width: fit-content;
-  }
-
-  .company {
-    width: calc(100vw - 32px); /* 1 company div per row */
-  }
-  
+    
 }
 
 /* sm */
@@ -837,10 +805,6 @@ background-image: url('../img/turespana.jpg');
     margin: .75rem 7rem;
   }
 
-  .companies {
-    margin: 0 5%;
-  }
-
 }
 
 /* xs */
@@ -865,6 +829,7 @@ background-image: url('../img/turespana.jpg');
   .avatar{
     width: 40%;
   }
+
 
 
 }

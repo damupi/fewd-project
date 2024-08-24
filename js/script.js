@@ -8,10 +8,11 @@ const desktopMenuOpts = document.querySelectorAll('#desktop-menu ul li a')
 // Desktop items
 const menuItems = document.querySelectorAll('.desktop-menu ul li');
 
+let imgGdc = document.querySelector('[data-company_img="gdc"]');
 let imgEmail = document.querySelector('[data-social_img="email"]');
 let imgTelegram = document.querySelector('[data-social_img="telegram"]');
 let imgTwitter = document.querySelector('[data-social_img="twitter"]');
-let socialImgSrcs = [imgEmail, imgTelegram, imgTwitter];
+let ImgSrcs = [imgGdc, imgEmail, imgTelegram, imgTwitter];
 
 function switchTheme(e) {
     console.log('toggling theme');
@@ -42,13 +43,13 @@ let showPopupMenu = () =>  {
 let changeSocialImgs = (theme) =>  {
   // console.log('the theme is:', theme)
   if (theme === 'light') { 
-    socialImgSrcs.forEach( (item) => {
+    ImgSrcs.forEach( (item) => {
       // console.log(`the precious src was: ${item.src}`);
       item.src = item.src.replace('dark', 'light');
       // console.log(`the src has changed to: ${item.src}`);
     })
   } else {
-    socialImgSrcs.forEach( (item) => {
+    ImgSrcs.forEach( (item) => {
       // console.log(`the precious src was: ${item.src}`);
       item.src = item.src.replace( 'light', 'dark');
       // console.log(`the src has changed to: ${item.src}`);
