@@ -488,8 +488,7 @@ input:checked + .slider .slider-icon::before {
 
 .companies {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   gap: 3rem;
@@ -501,81 +500,50 @@ input:checked + .slider .slider-icon::before {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-}
-
-.company img {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.company .overlay {
-  opacity: 0;
-}
-[data-company="gambling.com"] {
-  background-color: #000000;
-  background-image: url('../img/gamblingdotcom3.jpeg');
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+
+.company .overlay {
+  opacity: 0;
+}
+
+[data-company="gambling.com"] {
+  background-color: #000000;
+  background-image: url('../img/gamblingdotcom3.jpeg');
+
 }
 
 [data-company="autoscout24"] {
   background-color: #FFFFFF;
   background-image: url('../img/autoscout24_2.png');
-  background-repeat:no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 [data-company="mytheresa"] {
   background-color: #FFFFFF;
   background-image: url('../img/mytheresa.jpg');
-  background-repeat:no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 
 [data-company="catenamedia"] {
   background-color: #F43942;
   background-image: url('../img/catenamedia.jpg');
-  background-repeat:no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 [data-company="havas"] {
   background-color: #D01F39;
   background-image: url('../img/havas.jpg');
-  background-repeat:no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
 }
 
 [data-company="turespana"] {
   background-color: #FFFFFF;
   background-image: url('../img/turespana.jpg');
-  background-repeat:no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 
@@ -701,10 +669,9 @@ input:checked + .slider .slider-icon::before {
     margin: .75rem 8rem;
   }
 
-  .boxx {
-    max-width: 200px;
-    height: 75px;
-  }
+  .company {
+    width: 30vh;
+  } 
     
   }
   
@@ -723,9 +690,14 @@ input:checked + .slider .slider-icon::before {
       margin: 0 auto;
     }
     
-      .hero p, .intro p{
-        margin: .75rem 7.5rem;
-      }
+    .hero p, .intro p{
+      margin: .75rem 7.5rem;
+    }
+
+    .company {
+      width: 25vh;
+    }
+
 }
 
 /* lg */
@@ -754,6 +726,10 @@ input:checked + .slider .slider-icon::before {
     flex-wrap: wrap;
   }
 
+  .company {
+    width: 30vh;
+  }
+
 }
 
 /* md */
@@ -771,6 +747,9 @@ input:checked + .slider .slider-icon::before {
     margin: .75rem 7.5rem;
   }
 
+  .company {
+    width: 70vh;
+  }
     
 }
 
@@ -804,6 +783,8 @@ input:checked + .slider .slider-icon::before {
   .hero p, .intro p{
     margin: .75rem 7rem;
   }
+
+
 
 }
 
