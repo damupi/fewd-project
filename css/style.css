@@ -491,7 +491,8 @@ input:checked + .slider .slider-icon::before {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  align-content: center;
+  gap: 16px;
 }
 
 .company {
@@ -506,6 +507,9 @@ input:checked + .slider .slider-icon::before {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  border-radius: 5%;
+  flex-grow: 2;
+  flex-shrink: 2;
 }
 
 
@@ -516,7 +520,6 @@ input:checked + .slider .slider-icon::before {
 [data-company="gambling.com"] {
   background-color: #000000;
   background-image: url('../img/gamblingdotcom3.jpeg');
-
 }
 
 [data-company="autoscout24"] {
@@ -670,8 +673,9 @@ input:checked + .slider .slider-icon::before {
   }
 
   .company {
-    width: 30vh;
-  } 
+    width: calc((100vh / 2 - 32px));
+  }
+
     
   }
   
@@ -695,7 +699,7 @@ input:checked + .slider .slider-icon::before {
     }
 
     .company {
-      width: 25vh;
+      width: calc((100vh / 2 - 32px));
     }
 
 }
@@ -727,7 +731,7 @@ input:checked + .slider .slider-icon::before {
   }
 
   .company {
-    width: 30vh;
+    width: calc(100vh / 2);
   }
 
 }
@@ -748,7 +752,8 @@ input:checked + .slider .slider-icon::before {
   }
 
   .company {
-    width: 70vh;
+    width: 100vh;
+    margin: 0 20vh;
   }
     
 }
@@ -784,6 +789,10 @@ input:checked + .slider .slider-icon::before {
     margin: .75rem 7rem;
   }
 
+  .company {
+    width: calc(60vh);
+    margin: 0;
+  }
 
 
 }
@@ -809,6 +818,10 @@ input:checked + .slider .slider-icon::before {
 
   .avatar{
     width: 40%;
+  }
+
+  .company {
+    width: calc(80vh);
   }
 
 
