@@ -8,12 +8,14 @@ const desktopMenuOpts = document.querySelectorAll('#desktop-menu ul li a')
 // Desktop items
 const menuItems = document.querySelectorAll('.desktop-menu ul li');
 
-let imgGdc = document.querySelector('[data-company_img="gdc"]');
+// let imgGdc = document.querySelector('[data-company_img="gdc"]');
 let imgEmail = document.querySelector('[data-social_img="email"]');
 let imgTelegram = document.querySelector('[data-social_img="telegram"]');
 let imgTwitter = document.querySelector('[data-social_img="twitter"]');
-let ImgSrcs = [imgGdc, imgEmail, imgTelegram, imgTwitter];
+// let ImgSrcs = [imgGdc, imgEmail, imgTelegram, imgTwitter];
+let ImgSrcs = [imgEmail, imgTelegram, imgTwitter];
 
+// toggle theme mode function
 function switchTheme(e) {
     console.log('toggling theme');
     if (e.target.checked) {
@@ -29,6 +31,8 @@ function switchTheme(e) {
     }
 }
 
+// mobile menu functions
+
 let hidePopupMenu = () => {
   popupMenu.style.display =  'none';
   popupMenu.style.overflow =  'hidden';
@@ -40,6 +44,8 @@ let showPopupMenu = () =>  {
   popupMenu.style.overflow =  'visible';
   popupMenu.classList.toggle('hidden');
 }
+
+
 let changeSocialImgs = (theme) =>  {
   // console.log('the theme is:', theme)
   if (theme === 'light') { 
@@ -59,9 +65,7 @@ let changeSocialImgs = (theme) =>  {
   return
 }
 
-
-
-
+/* Theme Toggle */
 
 // Event listener for toggle switch
 toggleSwitch.addEventListener('change', switchTheme, false);
@@ -78,21 +82,52 @@ mobileMenu.addEventListener('click', showPopupMenu);
 
 // Persist theme on page reload with logic to show opposite state on toggle
 if (
-      localStorage.getItem('color-mode') === 'dark' ||
-      (window.matchMedia('(prefers-color-scheme: dark)').matches &&
-      !localStorage.getItem('color-mode'))
-    ) {
-    document.documentElement.setAttribute('color-mode', 'dark');
-    toggleSwitch.checked = true;
-    modeLabel.textContent = "Dark Mode";
-    changeSocialImgs("dark")
-  } else {
-    document.documentElement.setAttribute('color-mode', 'light');
-    toggleSwitch.checked = false;
-    modeLabel.textContent = "Light Mode";
-    changeSocialImgs("light")
+  localStorage.getItem('color-mode') === 'dark' ||
+  (window.matchMedia('(prefers-color-scheme: dark)').matches &&
+  !localStorage.getItem('color-mode'))
+) {
+  document.documentElement.setAttribute('color-mode', 'dark');
+  toggleSwitch.checked = true;
+  modeLabel.textContent = "Dark Mode";
+  changeSocialImgs("dark")
+} else {
+  document.documentElement.setAttribute('color-mode', 'light');
+  toggleSwitch.checked = false;
+  modeLabel.textContent = "Light Mode";
+  changeSocialImgs("light")
 }
 
+/* END OF Theme Toggle */
+
+/* FADE IN ELEMENTS */
+
+const scrollOffset = 100;
+const scrollElement = document.querySelector(".js-scroll");
+const elementInView = (el, offset = 0) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return (
+    elementTop <= 
+    ((window.innerHeight || document.documentElement.clientHeight) - offset)
+  );
+};
+const displayScrollElement = () => {
+  scrollElement.classList.add('scrolled');
+}
+const hideScrollElement = () => {
+  scrollElement.classList.remove('scrolled');
+}
+const handleScrollAnimation = () => {
+  if (elementInView(scrollElement, scrollOffset)) {
+      displayScrollElement();
+  } else {
+    hideScrollElement();
+  }
+}
+window.addEventListener('scroll', () => {
+  handleScrollAnimation();
+})
+
+/* END OF FADE IN ELEMENTS */
 
 
 
