@@ -419,6 +419,11 @@ input:checked + .slider .slider-icon::before {
   display: none;
 }
 
+.desktop-menu a {
+  color: var(--element2);
+}
+
+
 .mobile-menu {
   display: none;
 }
