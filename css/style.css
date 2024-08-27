@@ -484,6 +484,12 @@ input:checked + .slider .slider-icon::before {
   rotate: -180deg;
 }
 
+[data-card='tag'], [data-card='code'] {
+  border: 2px solid var(--element2);
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+
 .card {
   background-color: var(--surface3);
   color: var(--element2);
