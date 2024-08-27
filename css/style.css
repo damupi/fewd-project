@@ -13,6 +13,7 @@
   --h6-size: 1.3rem;
   --h6-color: #914BB8;
   --p-size: 1.2rem;
+  --menu-size: 1.1rem;
 
   /* Default (light mode) colors */
   --surface1: #e6e6e6;
@@ -406,30 +407,23 @@ input:checked + .slider .slider-icon::before {
 /* END OF popup menu */
 
 /* NAVIGATION */
-
 .nav-box {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  margin: 0 1.25rem;
+  margin: 1.25rem;
 }
 
 .desktop-menu {
   display: none;
 }
 
-.desktop-menu a {
-  color: var(--element2);
-}
-
-
 .mobile-menu {
   display: none;
 }
 
 /* END OF NAVIGATION */
-
 
 /* HERO section */
 .hero {
@@ -576,7 +570,6 @@ input:checked + .slider .slider-icon::before {
   rotate: -45deg;
 }
 
-/* FLIP CARDS */
 
 .companies {
   display: flex;
@@ -642,8 +635,6 @@ input:checked + .slider .slider-icon::before {
 }
 
 
-/* END OF FLIP CARDS */
-
 /* END OF EXPERIENCE section */
 
 /* FOOTER */
@@ -695,55 +686,54 @@ input:checked + .slider .slider-icon::before {
 /* 2xl */
 @media (max-width: 1536px) {
   
-  .mobile-mennu {
+  .mobile-menu {
     display: none;
   }
 
   .desktop-menu {
-    display: block;
+    display: inline-block;
   }
-
+  
   .desktop-menu ul {
-    list-style-type: none;
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 1rem;
     font-size: var(--h6-size);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
   }
-
-  /* Base style for li */
+  
   .desktop-menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+    list-style-type: none; 
+  }
+
+  .desktop-menu a {
+    font-size: var(--menu-size);
+    text-decoration: none;
+    color: var(--element1);
+    display: block;
     position: relative;
-    padding-left: 25px; /* Increased space for the blinking border */
-    list-style-type: none;
+    padding: 4px 0;
   }
-
-  /* Blinking border animation */
-  .desktop-menu ul li a::before {
+  
+  .desktop-menu a::before {
     content: "";
+    width: 100%;
+    height: 4px;
     position: absolute;
-    top: 0;
     left: 0;
-    width: 20px;
-    height: 100%;
-    background-color: var(--element2);
-    animation: blink 1s 3; /* Animation effect */
+    bottom: 0;
+    background: red;
+    transition: 0.5s transform ease;
+    transform: scale3d(0,1,1);
+    transform-origin: 50% 50%;
   }
 
-  /* Keyframes for blinking effect */
-  @keyframes blink {
-    0%, 50% {
-      opacity: 1;
-    }
-    50.01%, 100% {
-      opacity: 0;
-    }
-  }
-
-  /* Hover state - keep border solid */
-  .desktop-menu ul li a.hover-active::before {
-    animation: none; /* Stop animation */
-    opacity: 1; /* Ensure the border stays visible */
+  .desktop-menu a:hover::before{
+    transform: scale3d(1,1,1);
+    transform-origin: 50% 50%;
+    background: red;
   }
 
   .hero-footer {
@@ -768,7 +758,6 @@ input:checked + .slider .slider-icon::before {
     width: calc((100vh / 2 - 32px));
   }
 
-    
   }
   
   /* xl */
