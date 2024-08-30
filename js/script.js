@@ -166,3 +166,20 @@ menuItems.forEach(item => {
   });
 });
 
+// Remove the modal-related code and add this:
+
+document.querySelectorAll(".flip-card").forEach(card => {
+  card.addEventListener("click", () => {
+    card.querySelector(".flip-card-inner").style.transform = 
+      card.querySelector(".flip-card-inner").style.transform === "rotateY(180deg)" 
+        ? "rotateY(0deg)" 
+        : "rotateY(180deg)";
+  });
+});
+
+// You can remove the openModal, closeModal, and getCompanyDescription functions
+// as they are no longer needed.
+
+// Rest of the existing code...
+
+
