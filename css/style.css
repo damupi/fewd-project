@@ -269,15 +269,6 @@ input:checked + .slider .slider-icon::before {
   50%{transform: translateY(10%);transition: ease 1.5s;}
 }
 
-/*
-.floating-img{
-  transform: translateY(-10%);
-  animation: floater 1.5s infinite;
-  transition: ease 0.5s;
-  width: 80px;
-  height:80px;
-}
-*/
 
 /* Fonts */
 
@@ -350,14 +341,17 @@ input:checked + .slider .slider-icon::before {
   font-weight: 700;
   transition: 0.5s;
 }
+
 #popup-menu ul:hover li a {
   /* color: #0002; */
   color: rgba(255, 0, 0, 0.6);
 }
+
 #popup-menu ul li:hover a {
   color: var(--element2);
   background: transparent;
 }
+
 #popup-menu ul li a:before {
   content: "";
   position: absolute;
@@ -407,18 +401,27 @@ input:checked + .slider .slider-icon::before {
 /* END OF popup menu */
 
 /* NAVIGATION */
+
+.logo h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: red;
+}
+
 .nav-box {
   display: flex;
   flex-flow: row wrap;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  margin: 1rem;
 }
-.nav-right {
+
+/* .nav-right {
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
-  gap: 1rem;
-}
+  gap: 1.5rem;
+} */
 
 .desktop-menu {
   display: none;
@@ -428,6 +431,9 @@ input:checked + .slider .slider-icon::before {
   display: none;
 }
 
+#burguer-menu {
+  font-size: 3rem;
+}
 
 
 /* END OF NAVIGATION */
@@ -444,6 +450,7 @@ input:checked + .slider .slider-icon::before {
 .hero h1, .intro h1{
   font-size: var(--h1-size);
   font-weight: bold;
+  padding: 0 5vh;
 }
 
 .hero p, .intro p, footer p{
