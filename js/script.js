@@ -8,28 +8,28 @@ const desktopMenuOpts = document.querySelectorAll('#desktop-menu ul li a')
 // Desktop items
 const menuItems = document.querySelectorAll('.desktop-menu ul li');
 
-// let imgGdc = document.querySelector('[data-company_img="gdc"]');
-let imgEmail = document.querySelector('[data-social_img="email"]');
-let imgTelegram = document.querySelector('[data-social_img="telegram"]');
-let imgTwitter = document.querySelector('[data-social_img="twitter"]');
-// let ImgSrcs = [imgGdc, imgEmail, imgTelegram, imgTwitter];
-let ImgSrcs = [imgEmail, imgTelegram, imgTwitter];
+// const imgGdc = document.querySelector('[data-company_img="gdc"]');
+const imgEmail = document.querySelector('[data-social_img="email"]');
+const imgTelegram = document.querySelector('[data-social_img="telegram"]');
+const imgTwitter = document.querySelector('[data-social_img="twitter"]');
+// const ImgSrcs = [imgGdc, imgEmail, imgTelegram, imgTwitter];
+const ImgSrcs = [imgEmail, imgTelegram, imgTwitter];
 
 // toggle theme mode function
-function switchTheme(e) {
-    console.log('toggling theme');
+const switchTheme = (e) => {
+    // console.log('toggling theme');
     if (e.target.checked) {
         document.documentElement.setAttribute('color-mode', 'dark');
         localStorage.setItem("color-mode", "dark");
         modeLabel.textContent = "Dark Mode";
         changeSocialImgs("dark");
-      } else {
+    } else {
         document.documentElement.setAttribute('color-mode', 'light');
         localStorage.setItem("color-mode", "light");
         modeLabel.textContent = "Light Mode";
         changeSocialImgs("light");
     }
-}
+};
 
 // mobile menu functions
 
@@ -65,11 +65,6 @@ const changeSocialImgs = (theme) =>  {
   return
 }
 
-const test = () => {
-  console.log('close clicked');
-} 
-/* Theme Toggle */
-
 // Event listener for toggle switch
 toggleSwitch.addEventListener('change', switchTheme, false);
 
@@ -82,6 +77,8 @@ popMenuOpts.forEach(
 mobileMenu.addEventListener('click', showPopupMenu);
 
 
+
+/* Theme Toggle */
 
 // Persist theme on page reload with logic to show opposite state on toggle
 if (
@@ -133,17 +130,7 @@ window.addEventListener('scroll', () => {
 /* END OF FADE IN ELEMENTS */
 
 
-
-
-
-
-
-
-
-
-
-
-
+/* POPUP MENU */
 // Add event listeners to each li
 menuItems.forEach(item => {
   item.addEventListener('mouseenter', () => {
@@ -157,7 +144,7 @@ menuItems.forEach(item => {
     // Add the hover-active class to the hovered item
     item.classList.add('hover-active');
   });
-
+  
   item.addEventListener('mouseleave', () => {
     // Re-enable animation on all li elements within the same ul
     menuItems.forEach(li => {
@@ -168,9 +155,10 @@ menuItems.forEach(item => {
     item.classList.remove('hover-active');
   });
 });
+/* END OF POPUP MENU */
 
-// Remove the modal-related code and add this:
 
+/* FLIP CARDS */
 document.querySelectorAll(".flip-card").forEach(card => {
   card.addEventListener("click", () => {
     card.querySelector(".flip-card-inner").style.transform = 
@@ -180,7 +168,4 @@ document.querySelectorAll(".flip-card").forEach(card => {
   });
 });
 
-// You can remove the openModal, closeModal, and getCompanyDescription functions
-// as they are no longer needed.
-
-// Rest of the existing code...
+/* END OF FLIP CARDS */
