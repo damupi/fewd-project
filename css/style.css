@@ -412,7 +412,12 @@ input:checked + .slider .slider-icon::before {
   flex-flow: row wrap;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 1.25rem;
+}
+.nav-right {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .desktop-menu {
@@ -422,6 +427,8 @@ input:checked + .slider .slider-icon::before {
 .mobile-menu {
   display: none;
 }
+
+
 
 /* END OF NAVIGATION */
 
@@ -724,6 +731,10 @@ input:checked + .slider .slider-icon::before {
 /* 2xl */
 @media (max-width: 1536px) {
   
+  .theme-switch-wrapper {
+    margin: 0 10px;
+  }
+
   .mobile-menu {
     display: none;
   }
@@ -884,6 +895,10 @@ input:checked + .slider .slider-icon::before {
     width: 50%;
   }
   
+  .theme-switch-wrapper {
+    margin: 0;
+  }
+
   .desktop-menu {
     display: none;
   }

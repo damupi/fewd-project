@@ -12,15 +12,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="color-mode">
-    <div class="theme-switch-wrapper">
-        <em id="mode-label">Dark Mode</em>
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round">
-                <span class="slider-icon"></span>
-            </div>
-        </label>
-    </div>
+
     <div id="popup-menu" class="popup-menu">
         <ul>
             <li><a href="#hero" data-text="Home">Home</a></li>
@@ -43,18 +35,29 @@
                   </svg>
                 <!-- <img src="./img/logo.png" alt="damupi logo"> -->
             </div>
-            <div class="desktop-menu">
-                <ul>
-                    <li><a href="#intro">intro</a></li>
-                    <li><a href="#skills">skills</a></li>
-                    <li><a href="#experience">experience</a></li>
-                    <li><a href="#contact">contact me</a></li>
-                </ul>
+            <div class="nav-right">
+                <div class="theme-switch-wrapper">
+                    <em id="mode-label">Dark Mode</em>
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round">
+                            <span class="slider-icon"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="desktop-menu">
+                    <ul>
+                        <li><a href="#intro">intro</a></li>
+                        <li><a href="#skills">skills</a></li>
+                        <li><a href="#experience">experience</a></li>
+                        <li><a href="#contact">contact me</a></li>
+                    </ul>
+                </div>
+                <div id="mobile-menu" class="mobile-menu">
+                    <span id="burguer-menu" class="material-symbols-rounded" alt="menu">menu</span>
+                </div>
             </div>
-            <div id="mobile-menu" class="mobile-menu">
-                <span id="burguer-menu" class="material-symbols-rounded" alt="menu">menu</span>
             </div>
-        </div>
     </nav>
     <section id="hero" class="hero container">
             <h1>Digital Analyst, Frontend Developer &amp; Crypto fan</h1>
