@@ -75,6 +75,7 @@
   --tertiary: #fff7d6;
   --icon-color: var(--element2); /* Moon color for light mode */
   --icon-color-dark: var(--element2); /* Sun color for dark mode */
+  --flip-card-border: rgba(0, 0, 0, 0.1);
 
   color: var(--element1);
   background: var(--surface3);
@@ -94,6 +95,7 @@
   --primary: #8fceff;
   --secondary: #72faca;
   --tertiary: #eee8a9;
+  --flip-card-border: rgba(255, 255, 255, 0.1);
   
   color: var(--element1);
   background: var(--surface1);
@@ -516,6 +518,7 @@ input:checked + .slider .slider-icon::before {
   align-items: center;
   margin: 0;
   padding: 0;
+  background: var(--surface1);
 }
 
 
@@ -538,7 +541,7 @@ input:checked + .slider .slider-icon::before {
 }
 
 .card {
-  background-color: var(--surface3);
+  background-color: var(--surface2);
   color: var(--element2);
   border: 1px solid rgba(255, 0, 0, 0.2);
   display: flex;
@@ -654,6 +657,8 @@ input:checked + .slider .slider-icon::before {
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  border: 2px solid var(--flip-card-border);
+  border-radius: 5px;
 }
 
 .flip-card-front {
@@ -661,14 +666,12 @@ input:checked + .slider .slider-icon::before {
   background-position: center;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-  border-radius: 5%;
 }
 
 .flip-card-back {
   background-color: var(--surface3);
   color: var(--element2);
   transform: rotateY(180deg);
-  border-radius: 5%;
 }
 
 .flip-card-back h3 {
