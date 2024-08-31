@@ -402,6 +402,18 @@ input:checked + .slider .slider-icon::before {
 
 /* NAVIGATION */
 
+@font-face {
+  font-family: 'Damupi';
+  src: url('../fonts/damupi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.logo h1 {
+  font-family: 'Damupi', 'Anonymous Pro', monospace;
+  color: #ff0000; /* Bright red */
+}
+
 .logo h1 {
   font-size: 2rem;
   font-weight: bolder;
