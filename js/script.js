@@ -33,20 +33,20 @@ function switchTheme(e) {
 
 // mobile menu functions
 
-let hidePopupMenu = () => {
+const hidePopupMenu = () => {
   popupMenu.style.display =  'none';
   popupMenu.style.overflow =  'hidden';
   popupMenu.classList.toggle('hidden');
 }
 
-let showPopupMenu = () =>  {
+const showPopupMenu = () =>  {
   popupMenu.style.display = 'block';
   popupMenu.style.overflow =  'visible';
   popupMenu.classList.toggle('hidden');
 }
 
 
-let changeSocialImgs = (theme) =>  {
+const changeSocialImgs = (theme) =>  {
   // console.log('the theme is:', theme)
   if (theme === 'light') { 
     ImgSrcs.forEach( (item) => {
@@ -65,6 +65,9 @@ let changeSocialImgs = (theme) =>  {
   return
 }
 
+const test = () => {
+  console.log('close clicked');
+} 
 /* Theme Toggle */
 
 // Event listener for toggle switch
@@ -181,5 +184,3 @@ document.querySelectorAll(".flip-card").forEach(card => {
 // as they are no longer needed.
 
 // Rest of the existing code...
-
-

@@ -384,20 +384,28 @@ input:checked + .slider .slider-icon::before {
   height: 1800px;
 }
 
-#popup-menu ul li:nth-child(4n + 1) a:before {
-  background: var(--element3);
+#popup-menu ul li:nth-child(6n + 1) a:before {
+  background: var(--element1);
 }
 
-#popup-menu ul li:nth-child(4n + 2) a:before {
+#popup-menu ul li:nth-child(6n + 2) a:before {
+  background: var(--element2);
+}
+
+#popup-menu ul li:nth-child(6n + 3) a:before {
   background: var(--hero-footer-bg);
 }
 
-#popup-menu ul li:nth-child(4n + 3) a:before {
+#popup-menu ul li:nth-child(6n + 4) a:before {
   background: var(--secondary);
 }
 
-#popup-menu ul li:nth-child(4n + 4) a:before {
+#popup-menu ul li:nth-child(6n + 5) a:before {
   background: var(--tertiary);
+}
+
+#popup-menu ul li:nth-child(6n + 5) a:before {
+  background: var(--card-icon-bg-color);
 }
 
 /* END OF popup menu */
@@ -429,13 +437,6 @@ input:checked + .slider .slider-icon::before {
   justify-content: space-between;
   margin: 1rem;
 }
-
-/* .nav-right {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-end;
-  gap: 1.5rem;
-} */
 
 .desktop-menu {
   display: none;
