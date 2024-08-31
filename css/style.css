@@ -1027,9 +1027,9 @@ input:checked + .slider .slider-icon::before {
   .avatar {
     width: 30%;
   }
-  
+
   .hero p, .intro p{
-    margin: .75rem 7rem;
+    margin: .75rem 1.5rem;
   }
 
   .company {
