@@ -612,6 +612,20 @@ input:checked + .slider .slider-icon::before {
   height: 200px;
   perspective: 1000px;
   margin: 10px;
+  animation: scaleCard 3s infinite alternate;
+}
+
+@keyframes scaleCard {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.flip-card:hover {
+  animation-play-state: paused;
 }
 
 .flip-card-inner {
@@ -654,6 +668,49 @@ input:checked + .slider .slider-icon::before {
   background-color: var(--surface3);
   color: var(--element2);
   transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flip-card-back h3 {
+  margin-bottom: 10px;
+}
+
+.flip-card-back p {
+  margin-bottom: 15px;
+}
+
+.flip-card-back a {
+  display: inline-block;
+  background-color: red;
+  color: var(--element2);
+  border-radius: 5%;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.flip-card-back a:hover {
+  background-color: darkred;
+}
+
+/* Adjust button styles for specific companies */
+.flip-card[data-company="catenamedia"] .flip-card-back a,
+.flip-card[data-company="havas"] .flip-card-back a {
+  background-color: white;
+  color: red;
+  border: 2px solid white;
+}
+
+.flip-card[data-company="catenamedia"] .flip-card-back a:hover,
+.flip-card[data-company="havas"] .flip-card-back a:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: darkred;
 }
 
 /* Company-specific styles */
