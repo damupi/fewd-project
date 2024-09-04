@@ -489,6 +489,7 @@ input:checked + .slider .slider-icon::before {
   background-color: #914bb8;
   text-align: center;
   padding: 5% 0;
+  color: white;
 }
 
 /* END OF INTRO section */
