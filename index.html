@@ -12,17 +12,6 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="color-mode">
-
-    <div id="popup-menu" class="popup-menu">
-        <ul>
-            <li><a href="#" data-text="">x</a></li>
-            <li><a href="#hero" data-text="Home">Home</a></li>
-            <li><a href="#intro" data-text="Intro">Intro</a></li>
-            <li><a href="#skills" data-text="Skills">Skills</a></li>
-            <li><a href="#experience" data-text="Experience">Experience</a></li>
-            <li><a href="#contact" data-text="Contact me">Contact me</a></li>
-          </ul>
-    </div>
     <div class="theme-switch-wrapper">
         <em id="mode-label">Dark Mode</em>
         <label class="theme-switch" for="checkbox">
@@ -45,19 +34,25 @@
                   </svg> -->
                   <h1>damupi</h1>
             </div>
-            <!-- <div class="nav-right"> -->
-
-                <div class="desktop-menu">
+                <nav id="desktop-menu" class="desktop-menu">
                     <ul>
                         <li><a href="#intro">intro</a></li>
                         <li><a href="#skills">skills</a></li>
                         <li><a href="#experience">experience</a></li>
                         <li><a href="#contact">contact me</a></li>
                     </ul>
-                </div>
-                <div id="mobile-menu" class="mobile-menu">
-                    <span id="burguer-menu" class="material-symbols-rounded" alt="menu">menu</span>
-                </div>
+                </nav>
+                <nav id="mobile-menu" class="mobile-menu">
+                        <span id="burguer-menu" class="material-symbols-rounded" alt="menu">menu</span>
+                        <ul class="mob-menu">
+                            <li><a href="#intro" data-text="Intro">Intro</a></li>
+                            <li><a href="#skills" data-text="Skills">Skills</a></li>
+                            <li><a href="#experience" data-text="Experience">Experience</a></li>
+                            <li><a href="#contact" data-text="Contact me">Contact me</a></li>
+                        </ul>
+                </nav>
+
+
             <!-- </div> -->
             </div>
     </nav>

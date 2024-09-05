@@ -1,9 +1,10 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const modeLabel = document.getElementById('mode-label');
 let mobileMenu = document.getElementById('mobile-menu');
-let popupMenu = document.getElementById('popup-menu');
-const popMenuOpts = document.querySelectorAll('#popup-menu ul li a')
-const desktopMenuOpts = document.querySelectorAll('#desktop-menu ul li a')
+let burgerMenu = document.getElementById('burguer-menu');
+let MobMenu = document.querySelector('.mob-menu');
+const MobMenuOpts = document.querySelectorAll('.mob-menu li a');
+const desktopMenuOpts = document.querySelectorAll('#desktop-menu ul li a');
 // List menu items
 // Desktop items
 const menuItems = document.querySelectorAll('.desktop-menu ul li');
@@ -33,16 +34,20 @@ const switchTheme = (e) => {
 
 // mobile menu functions
 
-const hidePopupMenu = () => {
-  popupMenu.style.display =  'none';
-  popupMenu.style.overflow =  'hidden';
-  popupMenu.classList.toggle('hidden');
+const hideMobileMenu = () => {
+  // console.log('calling hide Mob Menu');
+  MobMenu.style.display = 'none';
 }
 
-const showPopupMenu = () =>  {
-  popupMenu.style.display = 'block';
-  popupMenu.style.overflow =  'visible';
-  popupMenu.classList.toggle('hidden');
+const showMobileMenu = () =>  {
+  // console.log('calling show Mob Menu');
+  MobMenu.style.display = 'block';
+  if( burgerMenu.innerHTML === 'close') {
+    hideMobileMenu();
+    burgerMenu.innerHTML = 'menu';
+  } else {
+    burgerMenu.innerHTML = 'close';
+  }
 }
 
 
@@ -69,12 +74,12 @@ const changeSocialImgs = (theme) =>  {
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 // Event listener for options of the hidden menu
-popMenuOpts.forEach(
-  (item) => item.addEventListener('click', hidePopupMenu )
+MobMenuOpts.forEach(
+  (item) => item.addEventListener('click', hideMobileMenu )
 );
 
 // Event listener for clicking the hamburger menu
-mobileMenu.addEventListener('click', showPopupMenu);
+mobileMenu.addEventListener('click', showMobileMenu);
 
 
 
