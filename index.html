@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="color-mode">
@@ -42,16 +43,19 @@
                         <li><a href="#contact">contact me</a></li>
                     </ul>
                 </nav>
-                <nav id="mobile-menu" class="mobile-menu">
-                        <span id="burguer-menu" class="material-symbols-rounded" alt="menu">menu</span>
-                        <ul class="mob-menu">
-                            <li><a href="#intro" data-text="Intro">Intro</a></li>
-                            <li><a href="#skills" data-text="Skills">Skills</a></li>
-                            <li><a href="#experience" data-text="Experience">Experience</a></li>
-                            <li><a href="#contact" data-text="Contact me">Contact me</a></li>
-                        </ul>
+                <nav class="mobile-menu">
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                    <span id="burguer-menu" class="material-symbols-rounded" alt="menu">menu</span>
+                    </label>
+                    <div class="nav-mobile w3-animate-left">
+                        <a href="#intro" data-text="Intro">Intro</a>
+                        <a href="#skills" data-text="Skills">Skills</a>
+                        <a href="#experience" data-text="Experience">Experience</a>
+                        <a href="#contact" data-text="Contact me">Contact me</a>
+                      <!-- Add more menu items here -->
+                    </div>
                 </nav>
-
 
             <!-- </div> -->
             </div>
@@ -179,7 +183,7 @@
         </div>
 
     </section>
-    <section id="footer" class="footer container">
+    <footer id="footer" class="footer container">
         <svg width="59.1" height="110.4" viewBox="0 0 197 368" xmlns="http://www.w3.org/2000/svg">
             <g>
               <line fill="none" stroke="#f9070e" x1="97.5" y1="52" x2="99.5" y2="365" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -208,7 +212,7 @@
             <!-- </div>         -->
         </div>
 
-    </section>
+    </footer>
 
 
     <script src="./js/script.js"></script>

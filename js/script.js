@@ -1,13 +1,5 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const modeLabel = document.getElementById('mode-label');
-let mobileMenu = document.getElementById('mobile-menu');
-let burgerMenu = document.getElementById('burguer-menu');
-let MobMenu = document.querySelector('.mob-menu');
-const MobMenuOpts = document.querySelectorAll('.mob-menu li a');
-const desktopMenuOpts = document.querySelectorAll('#desktop-menu ul li a');
-// List menu items
-// Desktop items
-const menuItems = document.querySelectorAll('.desktop-menu ul li');
 
 // const imgGdc = document.querySelector('[data-company_img="gdc"]');
 const imgEmail = document.querySelector('[data-social_img="email"]');
@@ -32,24 +24,6 @@ const switchTheme = (e) => {
     }
 };
 
-// mobile menu functions
-
-const hideMobileMenu = () => {
-  // console.log('calling hide Mob Menu');
-  MobMenu.style.display = 'none';
-}
-
-const showMobileMenu = () =>  {
-  // console.log('calling show Mob Menu');
-  MobMenu.style.display = 'block';
-  if( burgerMenu.innerHTML === 'close') {
-    hideMobileMenu();
-    burgerMenu.innerHTML = 'menu';
-  } else {
-    burgerMenu.innerHTML = 'close';
-  }
-}
-
 
 const changeSocialImgs = (theme) =>  {
   // console.log('the theme is:', theme)
@@ -72,15 +46,6 @@ const changeSocialImgs = (theme) =>  {
 
 // Event listener for toggle switch
 toggleSwitch.addEventListener('change', switchTheme, false);
-
-// Event listener for options of the hidden menu
-MobMenuOpts.forEach(
-  (item) => item.addEventListener('click', hideMobileMenu )
-);
-
-// Event listener for clicking the hamburger menu
-mobileMenu.addEventListener('click', showMobileMenu);
-
 
 
 /* Theme Toggle */
@@ -133,35 +98,6 @@ window.addEventListener('scroll', () => {
 })
 
 /* END OF FADE IN ELEMENTS */
-
-
-/* POPUP MENU */
-// Add event listeners to each li
-menuItems.forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    // Remove animation from all other li elements within the same ul
-    menuItems.forEach(li => {
-      if (li !== item) {
-        li.classList.add('hover-inactive');
-        li.style.animation = 'none';
-      }
-    });
-    // Add the hover-active class to the hovered item
-    item.classList.add('hover-active');
-  });
-  
-  item.addEventListener('mouseleave', () => {
-    // Re-enable animation on all li elements within the same ul
-    menuItems.forEach(li => {
-      li.classList.remove('hover-inactive');
-      li.style.animation = '';
-    });
-    // Remove the hover-active class when hover ends
-    item.classList.remove('hover-active');
-  });
-});
-/* END OF POPUP MENU */
-
 
 /* FLIP CARDS */
 document.querySelectorAll(".flip-card").forEach(card => {

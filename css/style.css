@@ -309,46 +309,48 @@ input:checked + .slider .slider-icon::before {
 
 /* START OF NAV MOB MENU */
 
+.mobile-menu {
+  padding: 1.5rem 2rem;
+ }
 
-.mobile-menu ul {
-  width: 30vw;
-  height: 15vh;
-  position: absolute;
-  right: 1rem;
-  background-color: #914bb8;
-  overflow: hidden;
-  margin-right: 0;
-  margin-left: auto;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: block;
-  top: 7rem;
+ .nav-mobile {
   display: none;
-}
+ }
 
-.mobile-menu ul a {
-  text-decoration: none;
-  text-align: right;
+ .checkbtn{
+  font-size: 1.5rem;
   color: white;
-  font-size: large;
-  display: block;
-  padding: 0.5rem;
-  position: relative;
-}
-
-.mobile-menu ul a:hover {
-  color: #cccccc;
-}
-
-#burguer-menu  {
-  font-size: 3rem;
   cursor: pointer;
 }
 
-#burguer-menu::after, #burguer-menu::before {
-  border: 1px solid yellow;
+#check{
+  display: none;
 }
+
+ #check:checked ~ .nav-mobile {
+  display: block;
+ }
+
+ .nav-mobile {
+  position: absolute;
+  top: 7rem;
+  right: 1.5rem;
+  background: #914BB8;
+  z-index: 1;
+  width: 200px;
+ }
+
+ .nav-mobile a {
+  color: #fff;
+  padding: 1rem 1.5rem;
+  display: block;
+  text-decoration: none;
+  text-align: right;
+ }
+
+ .nav-mobile a:hover {
+  color: #cccccc;
+ }
 
 /* END OF NAV MOB MENU */
 
@@ -1095,7 +1097,7 @@ input:checked + .slider .slider-icon::before {
   }
   
   .theme-switch-wrapper {
-    margin: 0;
+    margin: 0 2.5rem;
   }
 
   .desktop-menu {
