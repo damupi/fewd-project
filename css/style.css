@@ -118,7 +118,7 @@
 /* Additional CSS for toggle switch */
 .theme-switch-wrapper {
   text-align: right;
-  margin:  0 20px;
+  margin: .5rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -311,46 +311,47 @@ input:checked + .slider .slider-icon::before {
 
 .mobile-menu {
   padding: 1.5rem 2rem;
- }
+  /* font-family: "Anonymous Pro", monospace; */
+}
 
- .nav-mobile {
+.nav-mobile {
   display: none;
- }
+}
 
- .checkbtn{
+.checkbtn{
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
 }
 
-#check{
+#check {
   display: none;
 }
 
- #check:checked ~ .nav-mobile {
+#check:checked ~ .nav-mobile {
   display: block;
- }
+}
 
- .nav-mobile {
+.nav-mobile {
   position: absolute;
   top: 7rem;
   right: 1.5rem;
   background: #914BB8;
   z-index: 1;
   width: 200px;
- }
+}
 
- .nav-mobile a {
+.nav-mobile a {
   color: #fff;
   padding: 1rem 1.5rem;
   display: block;
   text-decoration: none;
   text-align: right;
- }
+}
 
- .nav-mobile a:hover {
+.nav-mobile a:hover {
   color: #cccccc;
- }
+}
 
 /* END OF NAV MOB MENU */
 
@@ -363,6 +364,11 @@ input:checked + .slider .slider-icon::before {
   font-style: normal;
 }
 
+.logo {
+  margin-left: 3rem;
+}
+
+
 .logo h1 {
   font-family: 'Damupi', 'Anonymous Pro', monospace;
   color: #ff0000; /* Bright red */
@@ -371,7 +377,7 @@ input:checked + .slider .slider-icon::before {
 .logo h1 {
   font-size: 2rem;
   font-weight: bolder;
-  color: red;
+  color: #ff0000;
 }
 
 .nav-box {
@@ -469,9 +475,9 @@ input:checked + .slider .slider-icon::before {
 .card-container {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  row-gap: 2rem;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 
@@ -730,6 +736,7 @@ input:checked + .slider .slider-icon::before {
 
 .flip-card-back p {
   margin-bottom: 15px;
+  font-size: 12px;
 }
 
 .flip-card-back a {
@@ -749,17 +756,28 @@ input:checked + .slider .slider-icon::before {
 }
 
 /* Adjust button styles for specific companies */
+
+.flip-card[data-company="gambling.com"] .flip-card-back a {
+  background-color: #b6a5a5;
+  color: #222222;
+}
+
+.flip-card[data-company="gambling.com"] .flip-card-back a:hover {
+  background-color: #f1e9e9;
+  color: #222222;
+}
+
 .flip-card[data-company="catenamedia"] .flip-card-back a,
 .flip-card[data-company="havas"] .flip-card-back a {
-  background-color: #eeeeeec1;
-  color: var(--element1);
-  border: 2px solid #eeeeeec1;
+  background-color: #e6e6e6;
+  color: red;
+  border: 2px solid #e6e6e6;
 }
 
 .flip-card[data-company="catenamedia"] .flip-card-back a:hover,
 .flip-card[data-company="havas"] .flip-card-back a:hover {
   background-color: #eeeeee;
-  color: red;
+  color: black;
   border: 2px solid #eeeeee;
 }
 
@@ -882,6 +900,7 @@ input:checked + .slider .slider-icon::before {
 /* The desktop-first pre-defined media queries: */
 /* 2xl */
 @media (min-width: 1536px) {
+  
   .desktop-menu {
     display: inline-block;
   }
@@ -932,10 +951,6 @@ input:checked + .slider .slider-icon::before {
 /* 2xl */
 @media (max-width: 1536px) {
   
-  .theme-switch-wrapper {
-    margin: 0 10px;
-  }
-
   .mobile-menu {
     display: none;
   }
@@ -1054,13 +1069,6 @@ input:checked + .slider .slider-icon::before {
     margin: .75rem 3rem;
   }
   
-  .card-container {
-    display: flex;
-    flex-direction: row;
-    gap: 0rem;
-    flex-wrap: wrap;
-  }
-
   .company {
     width: calc(100vh / 2);
   }
@@ -1069,6 +1077,10 @@ input:checked + .slider .slider-icon::before {
 
 /* md */
 @media (max-width: 768px) {
+
+  .logo {
+    margin-left: 0;
+  }
 
   .hero-footer {
     margin-top: 2.75rem;
@@ -1095,11 +1107,6 @@ input:checked + .slider .slider-icon::before {
   nav .logo img {
     width: 50%;
   }
-  
-  .theme-switch-wrapper {
-    margin: 0 2.5rem;
-  }
-
   .desktop-menu {
     display: none;
   }
