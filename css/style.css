@@ -467,7 +467,7 @@ input:checked + .slider .slider-icon::before {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 2rem 0 0 0;
   background: var(--surface1);
 }
 
@@ -858,7 +858,7 @@ input:checked + .slider .slider-icon::before {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin: 0.5rem 0;
+  margin: 3rem 0;
   gap: 0.75em;
 }
 
@@ -1166,8 +1166,9 @@ input:checked + .slider .slider-icon::before {
     width: calc(80vh);
   }
 
-
-
+  .card {
+    width: 55vh;
+  }
 }
 
 /* Mobile container utility class: */
