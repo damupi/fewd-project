@@ -1,6 +1,7 @@
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 const modeLabel = document.getElementById('mode-label');
 const burguerMenuEl = document.getElementById('burguer-menu');
+const MobMenuOps = document.querySelectorAll('.nav-mobile a');
 
 // const imgGdc = document.querySelector('[data-company_img="gdc"]');
 const imgEmail = document.querySelector('[data-social_img="email"]');
@@ -25,6 +26,12 @@ const switchTheme = (e) => {
     }
 };
 
+// mobile menu functions
+
+const hideMobileMenu = () => {
+  // console.log('calling hide Mob Menu');
+  document.getElementById("check").checked = false;
+}
 
 const changeSocialImgs = (theme) =>  {
   // console.log('the theme is:', theme)
@@ -45,13 +52,13 @@ const changeSocialImgs = (theme) =>  {
   return
 }
 
+// Event listener for options of the hidden menu
+MobMenuOps.forEach(
+  (item) => item.addEventListener('click', hideMobileMenu )
+);
+
 // Event listener for toggle switch
 toggleSwitch.addEventListener('change', switchTheme, false);
-
-
-// Event listener BuguerMenu styling
-burguerMenuEl.addEventListener('click', toggleburguerMenu);
-
 
 /* Theme Toggle */
 
