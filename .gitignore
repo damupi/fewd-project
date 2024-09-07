@@ -1,2 +1,4 @@
 .vscode
 .env
+.htaccess
+.well-known/*
